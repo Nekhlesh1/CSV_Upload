@@ -1,5 +1,5 @@
 const express = require('express');
-const port = 6000;
+const port = 3000;
 const app = express();
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // SETTING ROUTES
-app.use('/',require('./routes/index.js'));
+app.use('/',require('./routes'));
 
 // STARTING SERVER
 app.listen(port, (err)=> {
