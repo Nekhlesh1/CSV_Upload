@@ -3,7 +3,8 @@ const Csv = require('../models/csv');
 module.exports.home = async function (req, res) {
 
     try {
-        const csvFiles = Csv.find({});
+        const csvFiles = await Csv.find();
+
         return res.render('home', {
             files: csvFiles,
             title: 'Home',

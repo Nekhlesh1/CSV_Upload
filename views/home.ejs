@@ -13,6 +13,8 @@
 
 <h1>Uploaded Files</h1>
 
+ 
+  
 <table>
     <thead>
       <tr>
@@ -23,7 +25,7 @@
       </tr>
     </thead>
     <tbody>
-      <% files.forEach(function(file) { %>
+      <%  for(let file of files) { %>
         <tr>
           <td><%= file.filename %></td>
           <td> </td>
@@ -32,11 +34,9 @@
             <a href="/csv/<%= file._id %>">View</a>
           </td>
         </tr>
-      <% }); %>
+      <% }; %>
     </tbody>
-  </table>
-  
-
+  </table> 
 
 
     <div class="container mt-5">

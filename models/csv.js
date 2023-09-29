@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const csvSchema = new mongoose.Schema({
-    fileName: {
+    filename: {
         type: String,
         required: true,
     },
-    headerRow: {
+    header_row: {
         type : [Object],
     },
-    dataRow: {
+    data_rows: {
         type: [Object],
     },
 }, {
